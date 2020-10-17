@@ -78,7 +78,7 @@ class Stack(list):
         Returns:
             None
 
-        Raise:
+        Raises:
             StackIsFullError: If the current length of stack is at max_size.
         """
         if self.size == self.max_size:
