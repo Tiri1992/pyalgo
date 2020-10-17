@@ -1,0 +1,8 @@
+# Cache
+**/__pycache__
+
+# Environments
+pyalgo_env
+
+# Logs
+**/*.log
