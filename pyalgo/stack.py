@@ -38,33 +38,48 @@ class Stack(list):
         self.max_size = max_size
 
     def empty(self) -> bool:
-        """Returns True if Stack is empty."""
+        """Defines if Stack is empty.
+
+        Returns:
+            Whether stack is empty. True for success, False otherwise.
+
+        Raises:
+            None
+        """
         return len(self) == 0
 
     @property
     def size(self) -> int:
-        """Returns the size of stack.
-        Getter property decorator makes this method
-        accessible as an attribute.
+        """Length of stack.
+
+        Returns:
+            The length of stack.
+
+        Raises:
+            None
         """
         return len(self)
 
     def peek(self) -> Union[int, str, None]:
-        """Returns value at top of stack"""
+        """Looks at the last element of Stack.
+
+        Returns:
+            Last element of stack.
+        """
         if not self.empty():
             return self[-1]
 
     def push(self, value: Union[int, str]) -> None:
         """Adds element to top of stack.
 
-        Parameters
-        ----------
-        value:
-            This value will be added to end of stack.
+        Args:
+            value: Element to be added at the top of Stack.
 
-        Returns
-        -------
-        None
+        Returns:
+            None
+
+        Raise:
+            StackIsFullError: If the current length of stack is at max_size.
         """
         if self.size == self.max_size:
             raise StackIsFullError(
