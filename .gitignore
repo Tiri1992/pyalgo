@@ -1,5 +1,7 @@
 # Cache
 **/__pycache__
+.pytest_cache
+.vscode
 
 # Environments
 pyalgo_env
